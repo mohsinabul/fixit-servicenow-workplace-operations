@@ -1,0 +1,13 @@
+# ServiceNow evidence: keep only approved, redacted screenshots and documents.
+evidence/raw/
+
+# Local/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Secrets and local environment files
+.env
+.env.*
+*.pem
+*.key
