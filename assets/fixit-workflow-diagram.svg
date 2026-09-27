@@ -1,65 +1,80 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="900" viewBox="0 0 1700 900" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="930" viewBox="0 0 1700 930" role="img" aria-labelledby="title desc">
   <title id="title">FixIt workplace facilities request workflow</title>
-  <desc id="desc">A workplace issue is submitted, routed to the central FixIt Facilities Team, and acknowledged by email. High urgency also sends a facilities alert. The request is then triaged and fulfilled. When a closed state is selected, a closure email is sent to the requester.</desc>
+  <desc id="desc">An employee submits a facilities issue. The new request is assigned to the central facilities team and a confirmation email record is generated. High urgency also generates a facilities alert. Staff then triage and fulfil the request. A second active flow generates the requester closure email when the state changes to Closed Complete, Closed Incomplete, or Closed Skipped.</desc>
   <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#1f4e70"/></marker>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#1f4e70"/>
+    </marker>
     <style>
-      .process{fill:#eaf5ef;stroke:#2d8f60;stroke-width:3}.email{fill:#edf5fc;stroke:#3e7fb4;stroke-width:3}.start{fill:#fff;stroke:#1f4e70;stroke-width:3}.decision{fill:#fff7de;stroke:#bd8411;stroke-width:3}.line{stroke:#1f4e70;stroke-width:3;fill:none;marker-end:url(#arrow)}.join{stroke:#1f4e70;stroke-width:3;fill:none}.t{font-family:Arial,sans-serif;fill:#123247;text-anchor:middle}.h{font-size:23px;font-weight:700}.s{font-size:17px}.label{font-family:Arial,sans-serif;font-size:16px;font-weight:700;fill:#79550c}.cap{font-family:Arial,sans-serif;font-size:15px;font-weight:700;fill:#527184;letter-spacing:1.5px}
+      .start{fill:#ffffff;stroke:#1f4e70;stroke-width:3}
+      .process{fill:#eaf5ef;stroke:#2d8f60;stroke-width:3}
+      .email{fill:#edf5fc;stroke:#3e7fb4;stroke-width:3}
+      .decision{fill:#fff7de;stroke:#bd8411;stroke-width:3}
+      .line{stroke:#1f4e70;stroke-width:3;fill:none;marker-end:url(#arrow)}
+      .join{stroke:#1f4e70;stroke-width:3;fill:none}
+      .title{font-family:Arial,sans-serif;font-size:30px;font-weight:700;fill:#123247;text-anchor:middle}
+      .subtitle{font-family:Arial,sans-serif;font-size:17px;fill:#526a7a;text-anchor:middle}
+      .heading{font-family:Arial,sans-serif;font-size:23px;font-weight:700;fill:#123247;text-anchor:middle}
+      .detail{font-family:Arial,sans-serif;font-size:17px;fill:#123247;text-anchor:middle}
+      .phase{font-family:Arial,sans-serif;font-size:15px;font-weight:700;fill:#527184;letter-spacing:1.4px}
+      .branch{font-family:Arial,sans-serif;font-size:16px;font-weight:700;fill:#79550c}
     </style>
   </defs>
 
-  <rect width="1700" height="900" fill="#ffffff"/>
-  <rect x="0" y="0" width="1700" height="84" fill="#f6f9fb"/>
-  <text x="850" y="43" class="t h" font-size="31">FixIt Facilities Request Workflow</text>
-  <text x="850" y="68" class="t s">From employee submission to requester closure notification</text>
+  <rect width="1700" height="930" fill="#ffffff"/>
+  <rect x="0" y="0" width="1700" height="84" fill="#f5f8fa"/>
+  <text x="850" y="42" class="title">FixIt Facilities Request Workflow</text>
+  <text x="850" y="67" class="subtitle">From employee submission to requester closure notification</text>
 
-  <text x="850" y="112" class="cap" text-anchor="middle">NEW REQUEST ROUTING FLOW</text>
+  <text x="70" y="113" class="phase">1  NEW REQUEST ROUTING</text>
 
   <rect x="70" y="135" width="230" height="94" rx="14" class="start"/>
-  <text x="185" y="174" class="t h">Employee submits</text>
-  <text x="185" y="202" class="t s">Report a Facilities Issue</text>
+  <text x="185" y="174" class="heading">Employee submits</text>
+  <text x="185" y="202" class="detail">Report a Facilities Issue</text>
 
   <rect x="395" y="135" width="240" height="94" rx="14" class="process"/>
-  <text x="515" y="174" class="t h">Facilities Request</text>
-  <text x="515" y="202" class="t s">Created with FIX number</text>
+  <text x="515" y="174" class="heading">Facilities Request</text>
+  <text x="515" y="202" class="detail">Created with FIX number</text>
 
   <rect x="730" y="135" width="240" height="94" rx="14" class="process"/>
-  <text x="850" y="174" class="t h">Central assignment</text>
-  <text x="850" y="202" class="t s">FixIt Facilities Team</text>
+  <text x="850" y="174" class="heading">Central assignment</text>
+  <text x="850" y="202" class="detail">FixIt Facilities Team</text>
 
   <rect x="1065" y="135" width="240" height="94" rx="14" class="email"/>
-  <text x="1185" y="174" class="t h">Requester confirmation</text>
-  <text x="1185" y="202" class="t s">Email record generated</text>
+  <text x="1185" y="174" class="heading">Requester email</text>
+  <text x="1185" y="202" class="detail">Confirmation generated</text>
 
   <path d="M300 182 H395 M635 182 H730 M970 182 H1065" class="line"/>
 
   <polygon points="1065,355 1185,285 1305,355 1185,425" class="decision"/>
-  <text x="1185" y="348" class="t h">Urgency</text>
-  <text x="1185" y="375" class="t h">High?</text>
+  <text x="1185" y="348" class="heading">Urgency</text>
+  <text x="1185" y="375" class="heading">High?</text>
   <path d="M1185 229 V285" class="line"/>
 
   <rect x="1370" y="308" width="260" height="94" rx="14" class="email"/>
-  <text x="1500" y="347" class="t h">Facilities alert</text>
-  <text x="1500" y="375" class="t s">High urgency only</text>
+  <text x="1500" y="347" class="heading">Facilities alert</text>
+  <text x="1500" y="375" class="detail">High urgency only</text>
   <path d="M1305 355 H1370" class="line"/>
-  <text x="1335" y="336" class="label">Yes</text>
+  <text x="1335" y="336" class="branch">Yes</text>
 
-  <text x="850" y="510" class="cap" text-anchor="middle">FACILITIES FULFILMENT</text>
-  <rect x="540" y="535" width="620" height="106" rx="14" class="process"/>
-  <text x="850" y="576" class="t h">Facilities triage and fulfilment</text>
-  <text x="850" y="606" class="t s">Assign specialist or fulfiller, update state, and add work notes</text>
+  <path d="M1185 425 V500 H850" class="join"/>
+  <path d="M1500 402 V500 H850" class="join"/>
+  <circle cx="850" cy="500" r="5" fill="#1f4e70"/>
+  <text x="1205" y="469" class="branch">No</text>
+  <text x="1410" y="480" class="branch">After alert</text>
 
-  <path d="M1185 425 V480 H850" class="join"/>
-  <path d="M1500 402 V480 H850" class="join"/>
-  <path d="M850 480 V535" class="line"/>
-  <text x="1205" y="458" class="label">No</text>
-  <text x="1430" y="459" class="label">After alert</text>
+  <text x="70" y="539" class="phase">2  FACILITIES FULFILMENT</text>
+  <rect x="540" y="555" width="620" height="106" rx="14" class="process"/>
+  <text x="850" y="596" class="heading">Facilities triage and fulfilment</text>
+  <text x="850" y="626" class="detail">Assign specialist or fulfiller, update state, and add work notes</text>
+  <path d="M850 500 V555" class="line"/>
 
-  <text x="850" y="700" class="cap" text-anchor="middle">REQUEST CLOSURE FLOW</text>
-  <rect x="540" y="725" width="620" height="105" rx="14" class="email"/>
-  <text x="850" y="765" class="t h">Requester closure notification</text>
-  <text x="850" y="795" class="t s">Sent when state changes to Closed Complete, Incomplete, or Skipped</text>
-  <path d="M850 641 V725" class="line"/>
+  <text x="70" y="744" class="phase">3  REQUEST CLOSURE</text>
+  <rect x="540" y="760" width="620" height="115" rx="14" class="email"/>
+  <text x="850" y="796" class="heading">Requester closure email</text>
+  <text x="850" y="824" class="detail">Triggered when state changes to:</text>
+  <text x="850" y="851" class="detail">Closed Complete, Closed Incomplete, or Closed Skipped</text>
+  <path d="M850 661 V760" class="line"/>
 
-  <text x="850" y="875" class="t s">Both flows are active. The closure flow runs as System User.</text>
+  <text x="850" y="914" class="subtitle">Both flows are active. The closure flow runs as System User.</text>
 </svg>
