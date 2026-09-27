@@ -47,6 +47,8 @@ I designed it around a process I could demonstrate end to end. I wanted requeste
 
 I checked generated email records and previews in the Personal Developer Instance Outbox. This project does not claim delivery to external mailboxes.
 
+Screenshot placement is documented in the [evidence guide](evidence/README.md).
+
 ## Technology
 
 - ServiceNow Personal Developer Instance

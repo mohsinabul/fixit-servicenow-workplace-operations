@@ -10,7 +10,7 @@ I built FixIt to provide one controlled way to report, route, work, and close wo
 | --- | --- |
 | Employee requester | Submit a request and read it. |
 | Facilities fulfiller | Triage, assign, update, add work notes, and close a request. |
-| Facilities manager | Review queues, assignments, and work in progress. |
+| Facilities team lead | Oversees the central team, assignments, and work in progress. |
 
 ## Data model
 
@@ -55,7 +55,7 @@ Every new request starts with the **FixIt Facilities Team**. After triage, it ca
 | Route Facilities Request | Facilities Request created | Assign central team, email requester, alert facilities inbox for High urgency. |
 | Notify Requester of Request Closure | State changes to a closed state | Email the requester with request details and final status. |
 
-Both flows are active and run as **System User**. I chose this setting so the closure flow can create an email record when a fulfiller closes the request. I've kept this permission choice visible because it fixed the earlier email-create error.
+Both flows are active. The closure flow runs as **System User**, so it can create an email record when a fulfiller closes a request. This setting fixed the earlier email-create error.
 
 ## Access model
 
