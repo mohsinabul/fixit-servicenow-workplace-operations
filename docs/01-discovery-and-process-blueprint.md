@@ -34,7 +34,7 @@ Every new request starts with the **FixIt Facilities Team**. After triage, it ca
 | FixIt Facilities Team | Central intake, triage, and general maintenance. |
 | Electrical & HVAC | Electrical faults, heating, cooling, and ventilation. |
 | Plumbing | Leaks, drainage, restrooms, and water-related issues. |
-| Cleaning & Workplace Services | Cleaning, furniture, and common-area requests. |
+| Cleaning & Workplace Services | Cleaning, waste, common-area, and workplace-service requests. |
 
 ## Process
 

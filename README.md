@@ -31,7 +31,7 @@ I designed it around a process I could demonstrate end to end. I wanted requeste
 | FixIt Facilities Team | Central intake and triage. |
 | Electrical & HVAC | Electrical, heating, cooling, and ventilation work. |
 | Plumbing | Leaks, drainage, restrooms, and water-related work. |
-| Cleaning & Workplace Services | Cleaning, furniture, and common-area work. |
+| Cleaning & Workplace Services | Cleaning, waste, common-area, and workplace-service requests. |
 
 ![FixIt facilities support structure](assets/fixit-facilities-support-structure-white.png)
 
@@ -39,11 +39,11 @@ I designed it around a process I could demonstrate end to end. I wanted requeste
 
 | Scenario | Evidence | Result |
 | --- | --- | --- |
-| Normal request | Medium-urgency plumbing request | Routed to central triage and requester email generated. |
-| High-urgency request | Electrical request, urgency High | Routed to central triage; requester confirmation and facilities-team alert generated. |
-| Completed work | High-urgency request closed complete | Closure notification generated for the requester. |
-| Incomplete work | Heating/cooling request closed incomplete | Closure notification generated with the final status. |
-| Access control | Requester and fulfiller views | Requester is read-only; fulfiller can update but cannot delete. |
+| Normal request | [TC01: Medium-urgency plumbing request](evidence/testing/TC01-normal-request/) | Routed to central triage and requester email generated. |
+| High-urgency request | [TC02: High-urgency electrical request](evidence/testing/TC02-high-urgency-request/) | Routed to central triage; requester confirmation and facilities-team alert generated. |
+| Completed work | [TC03: Request closed complete](evidence/testing/TC03-closed-complete/) | Closure notification generated for the requester. |
+| Incomplete work | [TC04: Request closed incomplete](evidence/testing/TC04-closed-incomplete/) | Closure notification generated with the final status. |
+| Access control | [TC05: Requester and fulfiller views](evidence/testing/TC05-role-access/) | Requester is read-only; fulfiller can update but cannot delete. |
 
 I checked generated email records and previews in the Personal Developer Instance Outbox. This project does not claim delivery to external mailboxes.
 

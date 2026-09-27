@@ -1,23 +1,21 @@
-# Evidence Guide
+# Evidence
 
-Store only approved, fictional, and redacted screenshots in this folder.
+This folder contains the screenshots used to verify the FixIt build and its manual test scenarios. All people, email addresses, and requests shown are fictional sample data from a Personal Developer Instance.
 
-## Build screenshots
+## Build evidence
 
-Put completed configuration screenshots in `build/` using the existing ordered filenames:
+The [build folder](build/) contains 24 ordered screenshots covering the application, data model, form, Record Producer, roles, groups, routing flow, access views, and closure-notification flow.
 
-- `01-fixit-app-dashboard.png` through `15b-request-closure-email-action.png`
+## Test evidence
 
-## Test screenshots
+| Test | Included evidence | Result |
+| --- | --- | --- |
+| [TC01: Normal request](testing/TC01-normal-request/) | Request routing, flow execution, and requester confirmation | Passed |
+| [TC02: High-urgency request](testing/TC02-high-urgency-request/) | Request input, routing, flow execution, requester confirmation, and facilities alert | Passed |
+| [TC03: Closed Complete](testing/TC03-closed-complete/) | Work in progress, closed record, closure flow, and closure email | Passed |
+| [TC04: Closed Incomplete](testing/TC04-closed-incomplete/) | Test input, closed record, and closure email | Passed |
+| [TC05: Role access](testing/TC05-role-access/) | Requester read-only access and fulfiller update access | Passed |
 
-| Folder | Test evidence to add |
-| --- | --- |
-| `testing/TC01-normal-request/` | Normal request routing, flow execution, and requester confirmation. |
-| `testing/TC02-high-urgency-request/` | High-urgency request, routing, flow execution, requester email, and facilities alert. |
-| `testing/TC03-closed-complete/` | Work in progress, closed-complete record, closure flow, and closure email. |
-| `testing/TC04-closed-incomplete/` | Closed-incomplete record and closure email. |
-| `testing/TC05-role-access/` | Requester read-only and fulfiller update access. |
+The screenshots verify email records and previews in the ServiceNow Outbox. They do not claim delivery to external mailboxes.
 
-Keep the original descriptive screenshot filenames when copying files into these folders.
-
-Do not upload credentials, real employee data, customer information, or unredacted production records.
+Only approved and fictional evidence belongs in this repository. Credentials, customer information, and unredacted production records must not be committed.
