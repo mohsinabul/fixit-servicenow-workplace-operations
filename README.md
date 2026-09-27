@@ -1,35 +1,63 @@
-# FixIt: Enterprise Workplace Operations
+# FixIt: Workplace Facilities Requests
 
-A ServiceNow App Engine Studio portfolio project for workplace facilities request management.
+![FixIt logo](assets/fixit-logo.png)
 
-## Status
+I built FixIt as a ServiceNow App Engine Studio application for managing workplace facilities issues in one clear process.
 
-Discovery and process design complete. The approved build target is an Operational MVP. No claim is made that the application has been deployed to a production environment.
+Employees submit a request through a simple catalog form. Facilities staff triage it, assign the right team member, and close it after recording work notes. I've kept the workflow focused so it is easy to follow and test.
 
-## Purpose
+I designed it around a process I could demonstrate end to end. I wanted requesters to have a short form while Facilities staff have a clear queue. I kept specialist routing manual because a triage review still needs context. I built and tested it in a PDI, so I've been clear about what was verified. I didn't connect it to an external email service.
 
-FixIt replaces informal workplace-facilities requests received by email, phone, and hallway conversations with a controlled ServiceNow process for request submission, triage, fulfilment, communication, and reporting.
+## What it does
 
-## Approved scope: Operational MVP
+- Creates a numbered Facilities Request from a Record Producer.
+- Captures issue type, affected area, description, and urgency.
+- Routes every new request to the FixIt Facilities Team for central triage.
+- Sends a confirmation to the requester.
+- Sends an extra alert for High urgency requests.
+- Lets facilities staff update and close requests.
+- Sends a closure email when a request is closed complete, closed incomplete, or closed skipped.
 
-The mentor challenge is the functional baseline. The portfolio extension adds three specialist Facilities groups, two standard operational reports, mandatory request descriptions, professional communication wording, and a documented manual test pack. It deliberately avoids advanced or unlearned features such as ATF, scripted ACLs, custom routing engines, integrations, AI, and multi-site support.
+## Workflow
 
-## Portfolio evidence
+![FixIt workflow](assets/fixit-workflow-diagram.svg)
 
-- [Discovery and process blueprint](docs/01-discovery-and-process-blueprint.md)
+## Roles and support teams
+
+| Role or group | Purpose |
+| --- | --- |
+| `fixit_user` | Creates and reads Facilities Requests. |
+| `fixit_fulfiller` | Creates, reads, and updates requests. Delete access is not granted. |
+| FixIt Facilities Team | Central intake and triage. |
+| Electrical & HVAC | Electrical, heating, cooling, and ventilation work. |
+| Plumbing | Leaks, drainage, restrooms, and water-related work. |
+| Cleaning & Workplace Services | Cleaning, furniture, and common-area work. |
+
+![FixIt facilities support structure](assets/fixit-facilities-support-structure-white.png)
+
+## Tested scenarios
+
+| Scenario | Evidence | Result |
+| --- | --- | --- |
+| Normal request | Medium-urgency plumbing request | Routed to central triage and requester email generated. |
+| High-urgency request | Electrical request, urgency High | Routed to central triage; requester confirmation and facilities-team alert generated. |
+| Completed work | High-urgency request closed complete | Closure notification generated for the requester. |
+| Incomplete work | Heating/cooling request closed incomplete | Closure notification generated with the final status. |
+| Access control | Requester and fulfiller views | Requester is read-only; fulfiller can update but cannot delete. |
+
+I checked generated email records and previews in the Personal Developer Instance Outbox. This project does not claim delivery to external mailboxes.
 
 ## Technology
 
 - ServiceNow Personal Developer Instance
 - App Engine Studio
+- Task-extended custom table
 - Record Producer
 - Flow Designer / Workflow Studio
-- Access controls and reporting
+- Roles, assignment groups, and manual test evidence
 
-## Documentation standard
+## Project notes
 
-Each completed increment will include the requirement, configuration evidence, test result, limitations, and a descriptive screenshot or artefact where appropriate.
-
-## Data and privacy
-
-This repository uses fictional sample data only. It contains no credentials, tokens, personal data, or production-company information.
+- All people, email addresses, and requests are fictional sample data.
+- It is a portfolio project, not a production deployment.
+- A concise [as-built process blueprint](docs/01-discovery-and-process-blueprint.md) documents the design and test boundaries.

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="820" viewBox="0 0 1600 820" role="img" aria-labelledby="title desc">
+  <title id="title">FixIt workplace facilities request workflow</title>
+  <desc id="desc">An employee submits a request, it is routed to central triage, high urgency sends an alert, a fulfiller works the request, and a closure email is sent.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#214c6b"/></marker>
+    <style>
+      .box{fill:#ffffff;stroke:#214c6b;stroke-width:3}.action{fill:#e8f4ee;stroke:#2c8c5b;stroke-width:3}.email{fill:#eef5fb;stroke:#3c78a8;stroke-width:3}.decision{fill:#fff8df;stroke:#b88416;stroke-width:3}.line{stroke:#214c6b;stroke-width:3;fill:none;marker-end:url(#arrow)}.t{font-family:Arial,sans-serif;fill:#123247;text-anchor:middle}.h{font-size:23px;font-weight:700}.s{font-size:17px}.label{font-family:Arial,sans-serif;font-size:17px;font-weight:700;fill:#785706}
+    </style>
+  </defs>
+  <rect width="1600" height="820" fill="white"/>
+  <text x="800" y="50" class="t h" font-size="32">FixIt Facilities Request Workflow</text>
+  <rect x="75" y="105" width="230" height="94" rx="14" class="box"/><text x="190" y="145" class="t h">Employee submits</text><text x="190" y="173" class="t s">Report a Facilities Issue</text>
+  <rect x="390" y="105" width="250" height="94" rx="14" class="action"/><text x="515" y="145" class="t h">Facilities Request</text><text x="515" y="173" class="t s">created with FIX number</text>
+  <rect x="725" y="105" width="250" height="94" rx="14" class="action"/><text x="850" y="145" class="t h">Central triage</text><text x="850" y="173" class="t s">FixIt Facilities Team</text>
+  <rect x="1060" y="105" width="250" height="94" rx="14" class="email"/><text x="1185" y="145" class="t h">Requester email</text><text x="1185" y="173" class="t s">confirmation generated</text>
+  <path d="M305 152 H390 M640 152 H725 M975 152 H1060" class="line"/>
+  <polygon points="730,305 850,235 970,305 850,375" class="decision"/><text x="850" y="298" class="t h">Urgency</text><text x="850" y="325" class="t h">High?</text>
+  <path d="M1185 199 V305 H970" class="line"/>
+  <rect x="1110" y="258" width="260" height="94" rx="14" class="email"/><text x="1240" y="297" class="t h">Facilities alert</text><text x="1240" y="325" class="t s">High urgency only</text>
+  <path d="M970 305 H1110" class="line"/><text x="1025" y="286" class="label">Yes</text>
+  <rect x="600" y="460" width="500" height="100" rx="14" class="action"/><text x="850" y="500" class="t h">Specialist assignment and work</text><text x="850" y="530" class="t s">Assign fulfiller, update state, add work notes</text>
+  <path d="M850 375 V460" class="line"/><text x="870" y="420" class="label">No or after alert</text>
+  <path d="M1240 352 V410 H1100 V460" class="line"/>
+  <rect x="600" y="650" width="500" height="100" rx="14" class="email"/><text x="850" y="690" class="t h">Closure notification</text><text x="850" y="720" class="t s">Closed Complete, Incomplete, or Skipped</text>
+  <path d="M850 560 V650" class="line"/>
+  <text x="850" y="795" class="t s">Both flows are active and run as System User.</text>
+</svg>
